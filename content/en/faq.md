@@ -43,7 +43,7 @@ Yes. Use the base URL `https://argolink.io` (no `/v1`) and the model ID `deepsee
 DeepSeek publishes 500 concurrent requests per account for V4 Pro and 2,500 for Flash, and answers 429 above that. The gateway does not publish a per-model limit. Either way, treat 429 and 503 as retryable, and 400, 401, 402 and 422 as errors to fix.
 
 ### My Python script gets `403` with the body `error code: 1010`.
-That is Cloudflare refusing Python's default `Python-urllib/3.x` User-Agent before the request reaches the API. Send any other `User-Agent` header. The OpenAI and Anthropic SDKs, `requests` and `httpx` already do.
+The site rejects Python's default `Python-urllib/3.x` User-Agent before the request reaches the API. Send any other `User-Agent` header. The OpenAI and Anthropic SDKs, `requests` and `httpx` already do.
 
 ### Is JSON Output supported?
 DeepSeek supports `response_format: {"type": "json_object"}`; it asks for the word "json" in the prompt and an example of the shape, and warns that the content can occasionally be empty. The gateway forwards Chat Completions fields to DeepSeek as sent but does not document JSON Output itself, so test it with your prompts.

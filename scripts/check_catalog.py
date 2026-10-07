@@ -16,8 +16,8 @@ import urllib.request
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data", "deepseek-v4.json")
 CATALOG_URL = "https://argolink.io/api/catalog/v1/models?category=chat&sort=provider&page_size=100"
-# Python's default "Python-urllib/3.x" agent is refused with 403 (Cloudflare error 1010).
-USER_AGENT = "deepseek-v4-api-docs-check/1.0"
+# The site answers Python's default "Python-urllib/3.x" agent with 403, so name the script.
+USER_AGENT = "deepseek-v4-api-docs/1.0"
 
 
 def fetch_catalog(url: str = CATALOG_URL) -> list:

@@ -57,4 +57,4 @@ def test_main_exit_code_and_user_agent(monkeypatch, capsys):
     monkeypatch.setattr(check_catalog.urllib.request, "urlopen", urlopen)
     assert check_catalog.main([]) == 0
     assert "OK: 2 models" in capsys.readouterr().out
-    assert not seen["ua"].startswith("Python-urllib")
+    assert seen["ua"] == "deepseek-v4-api-docs/1.0"
