@@ -1,0 +1,41 @@
+{
+  "checked": "2026-10-07",
+  "sources": {
+    "gateway_catalog": "https://argolink.io/api/catalog/v1/models?category=chat&sort=provider&page_size=100",
+    "gateway_pages": ["https://argolink.io/en/models/deepseek-v4-pro", "https://argolink.io/en/models/deepseek-v4.1-flash"],
+    "deepseek_pricing": "https://api-docs.deepseek.com/quick_start/pricing",
+    "deepseek_thinking": "https://api-docs.deepseek.com/guides/thinking_mode",
+    "deepseek_rate_limit": "https://api-docs.deepseek.com/quick_start/rate_limit"
+  },
+  "peak_windows_utc": {"days": "Mon-Fri", "hours": [[1, 4], [6, 10]], "multiplier": 2},
+  "models": {
+    "deepseek-v4-pro": {
+      "deepseek_api_name": "deepseek-v4-pro",
+      "deepseek_version": "DeepSeek-V4-Pro-0813",
+      "replaces": "deepseek-v4-pro-0813",
+      "context_tokens": 1048576,
+      "max_output_tokens": 393216,
+      "images": false,
+      "efforts": ["low", "high", "max"],
+      "default_effort": "high",
+      "thinking": "always",
+      "deepseek_concurrency_limit": 500,
+      "gateway_usd_per_million": {"input": 0.528, "cached_input": 0.0176, "output": 1.584},
+      "official_usd_per_million": {"input": 0.66, "cached_input": 0.022, "output": 1.98}
+    },
+    "deepseek-v4.1-flash": {
+      "deepseek_api_name": "deepseek-flash",
+      "deepseek_version": "DeepSeek-V4.1-Flash",
+      "replaces": "deepseek-v4-flash-vision-exp",
+      "context_tokens": 1048576,
+      "max_output_tokens": 393216,
+      "images": true,
+      "efforts": ["low", "high", "max"],
+      "default_effort": "high",
+      "thinking": "default_on_none_turns_off",
+      "deepseek_concurrency_limit": 2500,
+      "gateway_usd_per_million": {"input": 0.12, "cached_input": 0.0024, "output": 0.48},
+      "official_usd_per_million": {"input": 0.15, "cached_input": 0.003, "output": 0.6}
+    }
+  }
+}

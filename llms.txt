@@ -1,7 +1,18 @@
-# Argolink DeepSeek V4 Pro
+# DeepSeek V4 API docs
 
-- content/en/quick-start.md
-- content/en/api-contract.md
-- content/en/faq.md
-- content/zh-CN/quick-start.md
-- argolink/FACTS.md
+> Unofficial reference for calling DeepSeek V4 Pro (deepseek-v4-pro) and V4.1 Flash (deepseek-v4.1-flash) through an OpenAI- and Anthropic-compatible gateway, compared with DeepSeek's own API. Facts checked 2026-10-07; each page lists its sources in front matter.
+
+## Pages
+
+- [Models, IDs and limits](content/en/models.md): model IDs on the gateway and on api.deepseek.com, versions, context, output limit, retired IDs
+- [Pricing](content/en/pricing.md): per-1M-token prices, peak-hour windows, other routes, worked cost examples
+- [Endpoints](content/en/endpoints.md): base URLs, auth headers, request fields for Chat Completions, Responses and Anthropic Messages
+- [Reasoning](content/en/reasoning.md): thinking on/off, reasoning_effort values and aliases, reasoning_content in multi-turn and tool calls
+- [Vision](content/en/vision.md): image input on V4.1 Flash per request format, DeepSeek's image limits
+- [Migrate](content/en/migrate.md): moving code between api.deepseek.com and the gateway, Claude Code setup
+- [FAQ](content/en/faq.md): short answers to common integration questions
+
+## Data
+
+- [data/deepseek-v4.json](data/deepseek-v4.json): the numbers above as JSON
+- [scripts/check_catalog.py](scripts/check_catalog.py): compares the JSON with the live public catalog

@@ -1,0 +1,167 @@
+{
+ "items": [
+  {
+   "id": "deepseek-v4-pro",
+   "display_name": "DeepSeek V4 Pro",
+   "provider_id": "deepseek",
+   "category": "chat",
+   "endpoint": "/v1/chat/completions",
+   "summary": {
+    "en": "DeepSeek's strongest model, upgraded for agent work",
+    "zh-CN": "DeepSeek 最强的模型，针对智能体工作全面升级"
+   },
+   "note": {
+    "en": "Weekdays 09:00–12:00 and 14:00–18:00 Beijing time are billed at twice these rates.",
+    "zh-CN": "工作日北京时间 09:00–12:00 和 14:00–18:00 按以上价格的 2 倍计费。"
+   },
+   "text": {
+    "context_tokens": 1048576,
+    "max_output_tokens": 393216,
+    "efforts": [
+     "low",
+     "high",
+     "max"
+    ],
+    "effort_aliases": {
+     "medium": "high",
+     "minimal": "low",
+     "xhigh": "high"
+    },
+    "default_effort": "high",
+    "thinking": "always",
+    "reasoning_rule": {
+     "en": "Thinking cannot be turned off: thinking.type disabled and reasoning_effort none are both ignored.",
+     "zh-CN": "思考关不掉：thinking.type disabled 和 reasoning_effort none 都会被忽略。"
+    }
+   },
+   "pricing": {
+    "policy_id": "official-80",
+    "multiplier": 0.8,
+    "official": {
+     "currency": "USD",
+     "billing_mode": "token",
+     "unit": "million_tokens",
+     "input_per_million": 0.66,
+     "output_per_million": 1.98,
+     "cached_input_per_million": 0.022,
+     "cache_write_per_million": 0
+    },
+    "effective": {
+     "currency": "USD",
+     "billing_mode": "token",
+     "unit": "million_tokens",
+     "input_per_million": 0.528,
+     "output_per_million": 1.584,
+     "cached_input_per_million": 0.0176,
+     "cache_write_per_million": 0
+    }
+   }
+  },
+  {
+   "id": "deepseek-v4.1-flash",
+   "display_name": "DeepSeek V4.1 Flash",
+   "provider_id": "deepseek",
+   "category": "chat",
+   "endpoint": "/v1/chat/completions",
+   "summary": {
+    "en": "DeepSeek's fast, low-cost model, with native image understanding",
+    "zh-CN": "DeepSeek 快速低价的模型，原生支持看图"
+   },
+   "note": {
+    "en": "Weekdays 09:00–12:00 and 14:00–18:00 Beijing time are billed at twice these rates.",
+    "zh-CN": "工作日北京时间 09:00–12:00 和 14:00–18:00 按以上价格的 2 倍计费。"
+   },
+   "text": {
+    "context_tokens": 1048576,
+    "max_output_tokens": 393216,
+    "images": true,
+    "efforts": [
+     "low",
+     "high",
+     "max"
+    ],
+    "effort_aliases": {
+     "medium": "high",
+     "minimal": "low",
+     "xhigh": "high"
+    },
+    "default_effort": "high",
+    "reasoning_rule": {
+     "en": "Thinking is on by default; reasoning_effort none turns it off, thinking.type disabled does not.",
+     "zh-CN": "默认开启思考；传 reasoning_effort none 可以关闭，传 thinking.type disabled 不起作用。"
+    }
+   },
+   "pricing": {
+    "policy_id": "official-80",
+    "multiplier": 0.8,
+    "official": {
+     "currency": "USD",
+     "billing_mode": "token",
+     "unit": "million_tokens",
+     "input_per_million": 0.15,
+     "output_per_million": 0.6,
+     "cached_input_per_million": 0.003,
+     "cache_write_per_million": 0
+    },
+    "effective": {
+     "currency": "USD",
+     "billing_mode": "token",
+     "unit": "million_tokens",
+     "input_per_million": 0.12,
+     "output_per_million": 0.48,
+     "cached_input_per_million": 0.0024,
+     "cache_write_per_million": 0
+    }
+   }
+  },
+  {
+   "id": "glm-5.3",
+   "display_name": "GLM-5.3",
+   "provider_id": "zhipu",
+   "category": "chat",
+   "endpoint": "/v1/chat/completions",
+   "summary": {
+    "en": "Z.ai's flagship for complex software engineering and long-horizon agent work",
+    "zh-CN": "Z.ai 的旗舰，面向复杂软件工程与长程智能体任务"
+   },
+   "text": {
+    "context_tokens": 1000000,
+    "max_output_tokens": 128000,
+    "efforts": [
+     "low",
+     "high",
+     "max"
+    ],
+    "effort_aliases": {
+     "medium": "high",
+     "xhigh": "max"
+    },
+    "default_effort": "max",
+    "thinking": "always"
+   },
+   "pricing": {
+    "policy_id": "official-80",
+    "multiplier": 0.8,
+    "official": {
+     "currency": "USD",
+     "billing_mode": "token",
+     "unit": "million_tokens",
+     "input_per_million": 1.4,
+     "output_per_million": 4.4,
+     "cached_input_per_million": 0.26,
+     "cache_write_per_million": 0
+    },
+    "effective": {
+     "currency": "USD",
+     "billing_mode": "token",
+     "unit": "million_tokens",
+     "input_per_million": 1.12,
+     "output_per_million": 3.52,
+     "cached_input_per_million": 0.208,
+     "cache_write_per_million": 0
+    }
+   }
+  }
+ ],
+ "_note": "Trimmed copy of the public catalog response, fetched 2026-10-07"
+}
